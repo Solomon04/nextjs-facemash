@@ -1,3 +1,92 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+.header {
+    background-color: rgb(137 3 4);
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 1.25rem /* 20px */;
+    padding-right: 1.25rem /* 20px */;
+}
+
+.nav-heading {
+    color: rgb(255 255 255);
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.875rem /* 30px */;
+    line-height: 2.25rem /* 36px */;
+    text-transform: uppercase;
+}
+
+.nav-text {
+    color: rgb(255 255 255);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1.125rem /* 18px */;
+    line-height: 1.75rem /* 28px */;
+}
+
+.subheading {
+    font-weight: 700;
+    font-size: 1.875rem /* 30px */;
+    line-height: 2.25rem /* 36px */;
+    text-align: center;
+}
+
+img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.container {
+    max-width: 48rem /* 768px */;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 4rem /* 64px */;
+    padding-bottom: 4rem /* 64px */;
+}
+
+.choice-container {
+    display: flex;
+    padding: 5rem
+}
+
+.animal-card {
+    width: auto;
+    cursor: pointer;
+}
+
+.animal-card-text {
+    font-weight: 500;
+    font-size: 1.125rem /* 18px */;
+    line-height: 1.75rem /* 28px */;
+    text-align: center;
+}
+
+.card-break {
+    width: 33.333333%;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    display: flex;
+}

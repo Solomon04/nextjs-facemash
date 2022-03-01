@@ -1,4 +1,5 @@
 import type {NextPage} from 'next'
+import Link from 'next/link';
 import {useEffect, useState} from "react";
 
 const Home: NextPage = () => {
@@ -42,22 +43,41 @@ const Home: NextPage = () => {
 
     return (
         <main>
-            <div className="bg-[#890304] w-full py-4 flex items-center justify-between px-5">
-                <a href="/" className="text-white text-center font-bold text-3xl uppercase cursor-pointer">DogMash 🐶</a>
-                <a href="/rankings" className="text-white font-semibold uppercase text-lg cursor-pointer">Rankings</a>
+            <div className="header">
+                {/* Heading */}
+                <Link href="/">
+                    <a className="nav-heading">
+                        DogMash 🐶
+                    </a>
+                </Link>
+
+                <Link href="/">
+                    <a className="nav-text">
+                        Rankings
+                    </a>
+                </Link>
             </div>
-            <div className="max-w-3xl mx-auto py-16">
-                <h3 className="font-bold text-3xl text-center">Who's Cuter? Click to Choose</h3>
-                <div className="flex pt-8">
-                    <a onClick={e => selectBestAnimal(animalOne, animalTwo)} className="w-full aspect-w-16 aspect-h-9 cursor-pointer">
-                        <img src={animalOne?.photo} className="w-full" />
-                        <h4 className="font-medium text-lg mt-3 text-center text-red-600">{animalOne?.name}</h4>
-                    </a>
-                    <div className="w-1/3 flex items-center justify-center font-semibold">OR</div>
-                    <a onClick={e => selectBestAnimal(animalTwo, animalOne)} className="w-full aspect-w-16 aspect-h-9 cursor-pointer" >
-                        <img src={animalTwo?.photo} className="w-full" />
-                        <h4 className="font-medium text-lg mt-3 text-center text-red-600">{animalTwo?.name}</h4>
-                    </a>
+            <div className="conta">
+                <h2 className="subheading">
+                    Who is Cuter? Click to Choose
+                </h2>
+                <div className="choice-container">
+                    {/* AnimalCard */}
+                    <div className="animal-card" onClick={e => selectBestAnimal(animalTwo, animalOne)}>
+                        <img src={animalOne?.photo} />
+                        <h4 className="animal-card-text">
+                            {animalOne?.name}
+                        </h4>
+                    </div>
+                    <div className="card-break">
+                        OR
+                    </div>
+                    <div className="animal-card" onClick={e => selectBestAnimal(animalTwo, animalOne)}>
+                        <img src={animalTwo?.photo} />
+                        <h4 className="animal-card-text">
+                            {animalTwo?.name}
+                        </h4>
+                    </div>
                 </div>
             </div>
         </main>
