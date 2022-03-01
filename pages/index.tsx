@@ -57,7 +57,7 @@ const Home: NextPage = () => {
                     </a>
                 </Link>
             </div>
-            <div className="conta">
+            <div className="container">
                 <h2 className="subheading">
                     Who is Cuter? Click to Choose
                 </h2>
