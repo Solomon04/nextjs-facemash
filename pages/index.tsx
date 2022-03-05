@@ -3,7 +3,6 @@ import Link from 'next/link';
 import {useEffect, useState} from "react";
 
 const Home: NextPage = () => {
-    const [animals, setAnimals] = useState([]);
     const [animalOne, setAnimalOne] = useState<Animal|undefined>();
     const [animalTwo, setAnimalTwo] = useState<Animal|undefined>();
 
@@ -13,9 +12,8 @@ const Home: NextPage = () => {
         });
 
         const data = await res.json();
-        setAnimals(data.animals)
         // randomize animals
-        const shuffled = animals.sort(() => 0.5 - Math.random());
+        const shuffled = data.animals.sort(() => 0.5 - Math.random());
         let selected = shuffled.slice(0, 2);
         setAnimalOne(selected[0])
         setAnimalTwo(selected[1])
