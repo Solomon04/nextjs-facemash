@@ -1,6 +1,7 @@
 import type {NextApiRequest, NextApiResponse} from 'next'
 import Elo from '@studimax/elo';
 import DataStore from "nedb";
+import path from "path";
 
 
 type Data = {
@@ -30,7 +31,7 @@ export default async function handler(
 
     const {Ra, Rb} = elo.calculateRating(winner.score, loser.score, 1);
 
-    const db = new DataStore({filename: '/db/database.db', autoload: true});
+    const db = new DataStore({filename: path.join(process.cwd(), 'database/database.db'), autoload: true});
 
     const update = async () => {
         db.update({_id: winner._id}, {$set: {score: Ra}}, {}, (err, numReplaced) => {
