@@ -10,7 +10,7 @@ export default async function handler(
     req: NextApiRequest,
     res: NextApiResponse<Data>
 ) {
-    const db = new DataStore({ filename: '../db/database.db', autoload: true });
+    const db = new DataStore({ filename: '/db/database.db', autoload: true });
 
     db.find({},  (err: any, docs: Animal[]) => {
         if (err) {
