@@ -11,7 +11,7 @@ export default async function handler(
     req: NextApiRequest,
     res: NextApiResponse<Data>
 ) {
-    const filePath = path.join(process.cwd(), 'database.db');
+    const filePath = path.join(process.cwd(), 'datastore.db');
     console.log(filePath)
     const db = new DataStore({ filename: filePath, autoload: true });
 

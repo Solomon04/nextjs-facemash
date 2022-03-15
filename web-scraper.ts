@@ -28,7 +28,7 @@ export default class WebScraper {
             return false;
         })
         // @ts-ignore
-        const db = new DataStore({ filename: './public/database.db', autoload: true });
+        const db = new DataStore({ filename: './public/datastore.db', autoload: true });
 
         db.insert(animals,  (err: any, newDoc: any) => {   // Callback is optional
             console.log(err, newDoc)
