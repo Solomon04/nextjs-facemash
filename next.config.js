@@ -1,6 +1,4 @@
 module.exports = {
-  reactStrictMode: true,
-  experimental: {
-    outputStandalone: true,
-  },
+  target: 'serverless',
+  experimental: { nftTracing: true },
 }
