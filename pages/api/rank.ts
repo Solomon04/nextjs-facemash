@@ -31,7 +31,7 @@ export default async function handler(
 
     const {Ra, Rb} = elo.calculateRating(winner.score, loser.score, 1);
 
-    const filePath = path.join(process.cwd(), 'public/database.db');
+    const filePath = path.join(process.cwd(), 'database.db');
     const db = new DataStore({ filename: filePath, autoload: true });
 
     const update = async () => {
