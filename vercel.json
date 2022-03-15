@@ -1,10 +1,10 @@
 {
   "functions": {
     "pages/api/animals.ts": {
-      "includeFiles": "database/database.db"
+      "includeFiles": "database/**"
     },
     "pages/api/animals.js": {
-      "includeFiles": "database/database.db"
+      "includeFiles": "database/**"
     }
   }
 }

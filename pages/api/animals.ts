@@ -1,9 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import DataStore from "nedb";
 import path from "path";
-import getConfig from 'next/config'
-const { serverRuntimeConfig } = getConfig()
-const { join, resolve } = require("path");
 
 type Data = {
     message?: string
@@ -14,8 +11,8 @@ export default async function handler(
     req: NextApiRequest,
     res: NextApiResponse<Data>
 ) {
-    const databaseDirectory = resolve(process.cwd(), "database");
-    const db = new DataStore({ filename: join(databaseDirectory, "database.db"), autoload: true });
+    const filePath = path.join(process.cwd(), 'database/database.db')
+    const db = new DataStore({ filename:filePath, autoload: true });
 
     db.find({},  (err: any, docs: Animal[]) => {
         if (err) {
