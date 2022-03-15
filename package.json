@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "scraper": "tsc web-scraper.ts && node web-scraper.js"
   },
   "dependencies": {
     "@petfinder/petfinder-js": "^1.0.6",

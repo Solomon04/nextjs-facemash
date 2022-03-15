@@ -4,8 +4,8 @@ import * as DataStore from "nedb";
 export default class WebScraper {
     static async initDb() {
         const client = new Client({
-            apiKey: process.env.PF_CLIENT_ID ?? '',
-            secret: process.env.PF_CLIENT_SECRET ?? '',
+            apiKey: 'J5ghTdk0wsSEZ78v7IEKlcerSJ8YM6UEHPtAoXA0QfGENgMzac',
+            secret: 'Xiid7lRGw1LWrQNeXWkgvjkTrOFcPDPDvh6GHFNc',
         });
         const response = await client.animal.search({
             type: 'Dog',
