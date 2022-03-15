@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import DataStore from "nedb";
+import path from "path";
 
 type Data = {
     message?: string
@@ -10,7 +11,9 @@ export default async function handler(
     req: NextApiRequest,
     res: NextApiResponse<Data>
 ) {
-    const db = new DataStore({ filename: './database/database.db', autoload: true });
+    const filePath = path.join(process.cwd(), 'public/database.db');
+    console.log(filePath)
+    const db = new DataStore({ filename: filePath, autoload: true });
 
     db.find({},  (err: any, docs: Animal[]) => {
         if (err) {
