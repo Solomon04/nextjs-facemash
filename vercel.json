@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "pages/api/animals.ts": {
+      "includeFiles": "database/database.db"
+    }
+  }
+}
