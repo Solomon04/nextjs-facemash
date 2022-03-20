@@ -49,7 +49,7 @@ const Home: NextPage = () => {
                     </a>
                 </Link>
 
-                <Link href="/">
+                <Link href="/ranking">
                     <a className="nav-text">
                         Rankings
                     </a>

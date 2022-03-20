@@ -91,3 +91,15 @@ img {
     font-weight: 600;
     display: flex;
 }
+
+p {
+    color: rgb(173, 5, 5);
+    font-weight: bold;
+    font-size: 2.5rem;
+    text-align: center;
+}
+img {
+    display: block;
+    text-align: center;
+    margin: auto
+}
